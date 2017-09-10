@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minefield", "minefield\minefield.csproj", "{3569207D-3C5B-47AE-8EDC-3BAAB96128AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minefieldtests", "minefieldtests\minefieldtests.csproj", "{27412A6D-E828-45DA-851E-B0BF4974676B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{3569207D-3C5B-47AE-8EDC-3BAAB96128AE}.Debug|x86.Build.0 = Debug|x86
 		{3569207D-3C5B-47AE-8EDC-3BAAB96128AE}.Release|x86.ActiveCfg = Release|x86
 		{3569207D-3C5B-47AE-8EDC-3BAAB96128AE}.Release|x86.Build.0 = Release|x86
+		{27412A6D-E828-45DA-851E-B0BF4974676B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{27412A6D-E828-45DA-851E-B0BF4974676B}.Debug|x86.Build.0 = Debug|Any CPU
+		{27412A6D-E828-45DA-851E-B0BF4974676B}.Release|x86.ActiveCfg = Release|Any CPU
+		{27412A6D-E828-45DA-851E-B0BF4974676B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

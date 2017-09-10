@@ -26,5 +26,16 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ECommerce\Product.cs" />
+    <Compile Include="MainClass.cs" />
+    <Compile Include="ECommerce\Pricing\IPricingStrategy.cs" />
+    <Compile Include="ECommerce\Pricing\NormalPricing.cs" />
+    <Compile Include="ECommerce\Pricing\VipPricing.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ECommerce\" />
+    <Folder Include="ECommerce\Pricing\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

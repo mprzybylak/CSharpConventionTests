@@ -1,0 +1,10 @@
+﻿using System;
+namespace minefield
+{
+	public class pl
+	{
+		public pl()
+		{
+		}
+	}
+}
