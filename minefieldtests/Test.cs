@@ -12,13 +12,26 @@ namespace minefieldtests
 		public void StrategiesShouldHaveNamesThatEndsWithWordStrategy()
 		{
 			var count = typeof(IPricingStrategy).Assembly
-									.GetTypes()
-									.Where(t => typeof(IPricingStrategy).IsAssignableFrom(t))
-									.Select(t => t.Name)
-									.Where(n => n.EndsWith("Strategy") == false)
-									.Count();
+												.GetTypes()
+			                                    .Where(t => t.GetInterfaces().Contains(typeof(IPricingStrategy)))
+												.Select(t => t.Name)
+												.Where(n => n.EndsWith("Strategy") == false)
+												.Count();
 
 			Assert.AreEqual(0, count);
+		}
+
+		[Test]
+		public void MoreMeaningfulErrorMessage()
+		{
+
+			typeof(IPricingStrategy).Assembly
+			                        .GetTypes()
+									.Where(t => t.GetInterfaces().Contains(typeof(IPricingStrategy)))
+									.Where(t => t.Name.EndsWith("SAtrategy") == false)
+									.ToList()
+			                        .ForEach(t => Assert.Fail(string.Format("The type {0} doesn't have name that ends with 'Strategy'", t.Name)));
+
 		}
 
 		[Test]
