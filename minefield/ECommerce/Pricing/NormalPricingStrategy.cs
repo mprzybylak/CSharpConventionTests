@@ -4,7 +4,7 @@ using minefield.ecommerce;
 
 namespace minefield.ECommerce.Pricing
 {
-	public class NormalPricing : IPricingStrategy
+	public class NormalPricingStrategy : IPricingStrategy
 	{
 		public int GetPrice(IList<Product> products)
 		{

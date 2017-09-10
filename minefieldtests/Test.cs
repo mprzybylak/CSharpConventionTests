@@ -1,15 +1,37 @@
 ﻿using NUnit.Framework;
 using minefield.ECommerce.Pricing;
 using System.Linq;
+using minefield.ECommerce;
+using System;
 
 namespace minefieldtests
 {
 	public class Test
 	{
 		[Test]
-		public void TestCase()
+		public void StrategiesShouldHaveNamesThatEndsWithWordStrategy()
 		{
+			var count = typeof(IPricingStrategy).Assembly
+									.GetTypes()
+									.Where(t => typeof(IPricingStrategy).IsAssignableFrom(t))
+									.Select(t => t.Name)
+									.Where(n => n.EndsWith("Strategy") == false)
+									.Count();
 
+			Assert.AreEqual(0, count);
+		}
+
+		[Test]
+		public void EnumsShouldBeNotEmpty()
+		{
+			var count = typeof(SeasonsEnum).Assembly
+										   .GetTypes()
+										   .Where(t => t.IsEnum)
+										   .Select(t => t.GetEnumNames().Length)
+										   .Where(c => c == 0)
+										   .Count();
+
+			Assert.AreEqual(0, count);
 		}
 
 		private void assemblyUsefulMethods()
@@ -23,9 +45,9 @@ namespace minefieldtests
 			var d = typeof(IPricingStrategy).IsAbstract; // is abstract class
 			var e = typeof(IPricingStrategy).IsEnum; // is enum
 			var f = typeof(IPricingStrategy).IsClass; // is class
-
 			var g = typeof(IPricingStrategy).IsInterface; // is interface
 			var h = typeof(IPricingStrategy).IsValueType; // is value type
+
 			typeof(IPricingStrategy).IsSubclassOf(typeof(object)); // true if class derives from type passed as an argument
 			typeof(IPricingStrategy).IsAssignableFrom(typeof(object)); // true if passed class can be assigned to reference of this class
 			typeof(IPricingStrategy).IsInstanceOfType(new object()); // true if passed object can be assigned to reference ot this class 

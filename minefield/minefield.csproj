@@ -30,8 +30,9 @@
     <Compile Include="ECommerce\Product.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="ECommerce\Pricing\IPricingStrategy.cs" />
-    <Compile Include="ECommerce\Pricing\NormalPricing.cs" />
-    <Compile Include="ECommerce\Pricing\VipPricing.cs" />
+    <Compile Include="ECommerce\Pricing\NormalPricingStrategy.cs" />
+    <Compile Include="ECommerce\Pricing\VipPricingStrategy.cs" />
+    <Compile Include="ECommerce\SeasonsEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECommerce\" />

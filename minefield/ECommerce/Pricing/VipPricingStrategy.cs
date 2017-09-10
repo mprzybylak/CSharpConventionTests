@@ -5,7 +5,7 @@ using minefield.ecommerce;
 
 namespace minefield.ECommerce.Pricing
 {
-	public class VipPricing : IPricingStrategy
+	public class VipPricingStrategy : IPricingStrategy
 	{
 		public int GetPrice(IList<Product> products)
 		{
