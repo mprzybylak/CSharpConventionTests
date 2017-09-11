@@ -27,7 +27,6 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ECommerce\Product.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="ECommerce\Pricing\IPricingStrategy.cs" />
     <Compile Include="ECommerce\Pricing\NormalPricingStrategy.cs" />
@@ -37,11 +36,17 @@
     <Compile Include="ECommerce\Taxes\TaxCalculator.cs" />
     <Compile Include="ECommerce\Taxes\PolishTax.cs" />
     <Compile Include="ECommerce\Taxes\SpanishTax.cs" />
+    <Compile Include="ECommerce\Products\Product.cs" />
+    <Compile Include="ECommerce\Products\ProductDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECommerce\" />
     <Folder Include="ECommerce\Pricing\" />
     <Folder Include="ECommerce\Taxes\" />
+    <Folder Include="ECommerce\Products\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

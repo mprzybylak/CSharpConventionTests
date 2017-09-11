@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using minefield.ecommerce;
+using minefield.ECommerce.Products;
 
 namespace minefield.ECommerce.Pricing
 {

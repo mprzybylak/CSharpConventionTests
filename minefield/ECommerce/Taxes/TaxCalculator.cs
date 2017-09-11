@@ -1,5 +1,5 @@
 ﻿using System;
-using minefield.ecommerce;
+using minefield.ECommerce.Products;
 
 namespace minefield.ECommerce.Taxes
 {

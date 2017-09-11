@@ -29,12 +29,15 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
     <Compile Include="GettingTypesByKindOfType.cs" />
     <Compile Include="GettingTypesByNames.cs" />
     <Compile Include="GettingTypesByInheritanceHierarchy.cs" />
+    <Compile Include="ExploringAssembly.cs" />
+    <Compile Include="AnalyseOfGivenType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace minefield.ecommerce
+namespace minefield.ECommerce.Products
 {
 	public class Product
 	{

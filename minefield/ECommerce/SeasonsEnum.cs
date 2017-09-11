@@ -2,7 +2,7 @@
 
 namespace minefield.ECommerce
 {
-	public enum SeasonsEnum
+	internal enum SeasonsEnum
 	{
 		Spring, Summer, Autumn, Winter
 	}
