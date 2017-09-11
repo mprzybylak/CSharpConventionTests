@@ -7,12 +7,12 @@ namespace minefield.ECommerce.Pricing
 {
 	public class VipPricingStrategy : IPricingStrategy
 	{
-		public int GetPrice(IList<Product> products)
+		public decimal GetPrice(IList<Product> products)
 		{
 			var basePrice = products.Select(p => p.Price)
 			                        .Sum();
 
-			return (int)(basePrice - (basePrice * 0.2));
+			return (basePrice - (basePrice * 0.2M));
 		}
 	}
 }

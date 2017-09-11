@@ -34,10 +34,14 @@
     <Compile Include="ECommerce\Pricing\VipPricingStrategy.cs" />
     <Compile Include="ECommerce\SeasonsEnum.cs" />
     <Compile Include="ECommerce\Customer.cs" />
+    <Compile Include="ECommerce\Taxes\TaxCalculator.cs" />
+    <Compile Include="ECommerce\Taxes\PolishTax.cs" />
+    <Compile Include="ECommerce\Taxes\SpanishTax.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECommerce\" />
     <Folder Include="ECommerce\Pricing\" />
+    <Folder Include="ECommerce\Taxes\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,16 +4,16 @@ namespace minefield.ecommerce
 {
 	public class Product
 	{
-		readonly int _price;
+		readonly decimal _price;
 		readonly string _name;
 
-		public Product(string name, int price)
+		public Product(string name, decimal price)
 		{
 			_name = name;
 			_price = price;
 		}
 
-		public int Price
+		public decimal Price
 		{
 			get
 			{

@@ -6,6 +6,6 @@ namespace minefield.ECommerce.Pricing
 {
 	public interface IPricingStrategy
 	{
-		int GetPrice(IList<Product> products);
+		decimal GetPrice(IList<Product> products);
 	}
 }

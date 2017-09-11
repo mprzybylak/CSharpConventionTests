@@ -34,6 +34,7 @@
     <Compile Include="Test.cs" />
     <Compile Include="GettingTypesByKindOfType.cs" />
     <Compile Include="GettingTypesByNames.cs" />
+    <Compile Include="GettingTypesByInheritanceHierarchy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
