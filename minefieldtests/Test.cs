@@ -46,28 +46,5 @@ namespace minefieldtests
 
 			Assert.AreEqual(0, count);
 		}
-
-        private void methodsForCheckingOfGivenMethods() {
-            // TODO add method checkings
-
-            //var b = typeof(IPricingStrategy).GetMethods().First().IsFinal;
-            //var c = typeof(IPricingStrategy).GetMethods().First().IsPublic;
-            //var d = typeof(IPricingStrategy).GetMethods().First().IsPrivate;
-            //var e = typeof(IPricingStrategy).GetMethods().First().IsVirtual;
-            //var f = typeof(IPricingStrategy).GetMethods().First().IsAbstract;
-
-            // add test for existance of parametrless constructor
-
-            // constructor info is not that different from method info in our case to distinct
-            //typeof(NormalPricingStrategy).GetConstructors().First();
-
-            // event info does not provide useful methods from our perspective
-            //typeof(NormalPricingStrategy).GetEvents().First();
-
-            // propert info does not provide useful methods from our perspective
-            //typeof(NormalPricingStrategy).GetProperties().First();
-		}
-
-
 	}
 }
