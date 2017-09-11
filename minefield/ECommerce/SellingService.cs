@@ -7,6 +7,10 @@ namespace minefield.ECommerce
     {
         public event ProductSoldEventHandler ProductSold;
 
-        // TODO rest of code...
-    }
+        private void importantLogic() {
+            // ...
+        }
+
+		// TODO rest of code...
+	}
 }

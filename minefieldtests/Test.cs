@@ -50,14 +50,11 @@ namespace minefieldtests
         private void methodsForCheckingOfGivenMethods() {
             // TODO add method checkings
 
-            typeof(IPricingStrategy).GetMethods().First().GetCustomAttributes(true);
-            typeof(IPricingStrategy).GetMethods().First().GetGenericArguments();
-            var a = typeof(IPricingStrategy).GetMethods().First().IsAbstract;
-            var b = typeof(IPricingStrategy).GetMethods().First().IsFinal;
-            var c = typeof(IPricingStrategy).GetMethods().First().IsPublic;
-            var d = typeof(IPricingStrategy).GetMethods().First().IsPrivate;
-            var e = typeof(IPricingStrategy).GetMethods().First().IsVirtual;
-            var f = typeof(IPricingStrategy).GetMethods().First().IsAbstract;
+            //var b = typeof(IPricingStrategy).GetMethods().First().IsFinal;
+            //var c = typeof(IPricingStrategy).GetMethods().First().IsPublic;
+            //var d = typeof(IPricingStrategy).GetMethods().First().IsPrivate;
+            //var e = typeof(IPricingStrategy).GetMethods().First().IsVirtual;
+            //var f = typeof(IPricingStrategy).GetMethods().First().IsAbstract;
 
             // add test for existance of parametrless constructor
 

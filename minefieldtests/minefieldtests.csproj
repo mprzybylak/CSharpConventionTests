@@ -39,6 +39,7 @@
     <Compile Include="ExploringAssembly.cs" />
     <Compile Include="AnalyseOfGivenType.cs" />
     <Compile Include="GettingMethods.cs" />
+    <Compile Include="AnalyseOfMethods.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
