@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace minefieldtests
 {
-    public class GettingTypesTest
+    public class GettingTypesByKindOfType
     {
 
         [Test]

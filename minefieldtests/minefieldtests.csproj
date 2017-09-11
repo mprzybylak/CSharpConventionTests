@@ -32,7 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
-    <Compile Include="GettingTypesTest.cs" />
+    <Compile Include="GettingTypesByKindOfType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
