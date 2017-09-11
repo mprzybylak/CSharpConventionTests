@@ -33,6 +33,7 @@
   <ItemGroup>
     <Compile Include="Test.cs" />
     <Compile Include="GettingTypesByKindOfType.cs" />
+    <Compile Include="GettingTypesByNames.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

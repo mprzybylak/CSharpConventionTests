@@ -3,6 +3,7 @@ using minefield.ECommerce.Pricing;
 using System.Linq;
 using minefield.ECommerce;
 using System;
+using System.Text.RegularExpressions;
 
 namespace minefieldtests
 {
@@ -11,10 +12,8 @@ namespace minefieldtests
 		[Test]
 		public void StrategiesShouldHaveNamesThatEndsWithWordStrategy()
 		{
-			var valueTypes = typeof(IPricingStrategy).Assembly
-													 .GetTypes()
-													 .Where(t => t.IsValueType)
-													 .ToList();
+			// when
+			Assert.IsTrue(Regex.IsMatch(withName.First().Name, "(Strategy)$"));
 
 
 			var count = typeof(IPricingStrategy).Assembly
@@ -65,14 +64,14 @@ namespace minefieldtests
 			//var e = typeof(IPricingStrategy).IsEnum; // is enum
 			//var f = typeof(IPricingStrategy).IsClass; // is class
 			//var g = typeof(IPricingStrategy).IsInterface; // is interface
-			var h = typeof(IPricingStrategy).IsValueType; // is value type
+			//var h = typeof(IPricingStrategy).IsValueType; // is value type
 
 			typeof(IPricingStrategy).IsSubclassOf(typeof(object)); // true if class derives from type passed as an argument
 			typeof(IPricingStrategy).IsAssignableFrom(typeof(object)); // true if passed class can be assigned to reference of this class
 			typeof(IPricingStrategy).IsInstanceOfType(new object()); // true if passed object can be assigned to reference ot this class 
 
-			var l = typeof(IPricingStrategy).Namespace; // namespace of type
-			var m = typeof(IPricingStrategy).Name; // name of type
+			//var l = typeof(IPricingStrategy).Namespace; // namespace of type
+			//var m = typeof(IPricingStrategy).Name; // name of type
 		}
 
 		private void methodsToUseAfterFiltering()
