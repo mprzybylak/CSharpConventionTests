@@ -11,6 +11,12 @@ namespace minefieldtests
 		[Test]
 		public void StrategiesShouldHaveNamesThatEndsWithWordStrategy()
 		{
+			var valueTypes = typeof(IPricingStrategy).Assembly
+													 .GetTypes()
+													 .Where(t => t.IsValueType)
+													 .ToList();
+
+
 			var count = typeof(IPricingStrategy).Assembly
 												.GetTypes()
 			                                    .Where(t => t.GetInterfaces().Contains(typeof(IPricingStrategy)))
@@ -55,10 +61,10 @@ namespace minefieldtests
 
 		private void methodsForFiltering()
 		{
-			var d = typeof(IPricingStrategy).IsAbstract; // is abstract class
-			var e = typeof(IPricingStrategy).IsEnum; // is enum
-			var f = typeof(IPricingStrategy).IsClass; // is class
-			var g = typeof(IPricingStrategy).IsInterface; // is interface
+			//var d = typeof(IPricingStrategy).IsAbstract; // is abstract class
+			//var e = typeof(IPricingStrategy).IsEnum; // is enum
+			//var f = typeof(IPricingStrategy).IsClass; // is class
+			//var g = typeof(IPricingStrategy).IsInterface; // is interface
 			var h = typeof(IPricingStrategy).IsValueType; // is value type
 
 			typeof(IPricingStrategy).IsSubclassOf(typeof(object)); // true if class derives from type passed as an argument

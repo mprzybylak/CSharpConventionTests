@@ -33,6 +33,7 @@
     <Compile Include="ECommerce\Pricing\NormalPricingStrategy.cs" />
     <Compile Include="ECommerce\Pricing\VipPricingStrategy.cs" />
     <Compile Include="ECommerce\SeasonsEnum.cs" />
+    <Compile Include="ECommerce\Customer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECommerce\" />
