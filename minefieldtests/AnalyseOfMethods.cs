@@ -2,6 +2,7 @@
 using minefield.ECommerce.Pricing;
 using NUnit.Framework;
 using System.Linq;
+using minefield.ECommerce;
 
 namespace minefieldtests
 {
@@ -32,7 +33,7 @@ namespace minefieldtests
             var methods = type.GetMethods()
                               .Where(m => m.IsPublic)
                               .Select(m => m.Name)
-                              .Where(n => !n.StartsWith("Get"))
+                              .Where(n => !n.StartsWith("Get") && !n.Equals("ToString") && !n.Equals("Equals"))
                               .ToList();
 
             // then

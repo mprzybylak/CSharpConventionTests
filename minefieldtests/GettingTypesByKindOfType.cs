@@ -80,7 +80,7 @@ namespace minefieldtests
             Assert.True(
                 (type.IsPrimitive) ||
                 (type.IsEnum) ||
-                (type.IsValueType && !type.IsEnum)
+                (type.IsValueType && !type.IsEnum && !type.IsPrimitive)
             );
         }
     }
