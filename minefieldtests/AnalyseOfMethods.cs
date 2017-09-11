@@ -36,7 +36,7 @@ namespace minefieldtests
                               .ToList();
 
             // then
-            Assert.AreEqual(0, methods);
+            Assert.AreEqual(0, methods.Count());
         }
 
         [Test]

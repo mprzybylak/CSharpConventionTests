@@ -63,5 +63,29 @@ namespace minefieldtests
             // then
             Assert.IsTrue(count > 0);
         }
+
+        [Test]
+        public void ShouldGetMutatorOfProperty() {
+
+            // when
+            var count = typeof(Product).GetProperties()
+                                       .Select(p => p.GetGetMethod())
+                                       .Count();
+
+            // then
+            Assert.IsTrue(count > 0);
+        }
+
+        [Test]
+        public void ShouldGetAccessorOfProperty() {
+
+			// when
+			var count = typeof(Product).GetProperties()
+                                       .Select(p => p.GetSetMethod())
+									   .Count();
+
+			// then
+			Assert.IsTrue(count > 0);
+        }
     }
 }
