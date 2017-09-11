@@ -12,10 +12,6 @@ namespace minefieldtests
 		[Test]
 		public void StrategiesShouldHaveNamesThatEndsWithWordStrategy()
 		{
-			// when
-			Assert.IsTrue(Regex.IsMatch(withName.First().Name, "(Strategy)$"));
-
-
 			var count = typeof(IPricingStrategy).Assembly
 												.GetTypes()
 			                                    .Where(t => t.GetInterfaces().Contains(typeof(IPricingStrategy)))
