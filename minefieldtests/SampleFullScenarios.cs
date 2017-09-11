@@ -8,7 +8,7 @@ using minefield.ECommerce.Taxes;
 
 namespace minefieldtests
 {
-	public class Test
+	public class SampleFullScenarios
 	{
 		[Test]
 		public void StrategiesShouldHaveNamesThatEndsWithWordStrategy()
