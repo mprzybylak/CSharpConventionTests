@@ -38,6 +38,7 @@
     <Compile Include="ECommerce\Taxes\SpanishTax.cs" />
     <Compile Include="ECommerce\Products\Product.cs" />
     <Compile Include="ECommerce\Products\ProductDto.cs" />
+    <Compile Include="ECommerce\SellingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECommerce\" />

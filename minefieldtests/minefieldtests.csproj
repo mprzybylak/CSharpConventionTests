@@ -38,6 +38,7 @@
     <Compile Include="GettingTypesByInheritanceHierarchy.cs" />
     <Compile Include="ExploringAssembly.cs" />
     <Compile Include="AnalyseOfGivenType.cs" />
+    <Compile Include="GettingMethods.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
