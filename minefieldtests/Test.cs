@@ -47,17 +47,6 @@ namespace minefieldtests
 			Assert.AreEqual(0, count);
 		}
 
-		private void methodsToUseAfterFiltering()
-		{
-			//var b = typeof(IPricingStrategy).Attributes; // get attributes for current type
-			//var c = typeof(IPricingStrategy).BaseType; // get base type for current type
-			
-			typeof(IPricingStrategy).GetEnumNames(); // get all names defined in this enum - exception if not enum
-			
-			//typeof(IPricingStrategy).GetInterfaces(); // get all implemented interfaces
-			
-		}
-
         private void methodsForGettingOtherMethods() {
             typeof(IPricingStrategy).GetConstructors(); // get all constructor
             typeof(IPricingStrategy).GetEvents(); // get all events defined in type
