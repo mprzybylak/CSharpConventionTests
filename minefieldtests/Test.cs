@@ -28,7 +28,7 @@ namespace minefieldtests
 			typeof(IPricingStrategy).Assembly
 			                        .GetTypes()
 									.Where(t => t.GetInterfaces().Contains(typeof(IPricingStrategy)))
-									.Where(t => t.Name.EndsWith("SAtrategy") == false)
+									.Where(t => t.Name.EndsWith("Strategy") == false)
 									.ToList()
 			                        .ForEach(t => Assert.Fail(string.Format("The type {0} doesn't have name that ends with 'Strategy'", t.Name)));
 
@@ -71,6 +71,9 @@ namespace minefieldtests
 
 		private void methodsToUseAfterFiltering()
 		{
+
+            // TODO add method checkings
+
 			var b = typeof(IPricingStrategy).Attributes; // get attributes for current type
 			var c = typeof(IPricingStrategy).BaseType; // get base type for current type
 			typeof(IPricingStrategy).GetConstructors(); // get all constructor
