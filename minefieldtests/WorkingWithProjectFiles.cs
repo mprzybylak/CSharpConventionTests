@@ -9,11 +9,13 @@ namespace minefieldtests
     public class WorkingWithProjectFiles
     {
         [Test]
-        public void v() {
-            var files = GetFiles("minefield")
-                .Where(n => n.EndsWith("MainClass.cs"))
-                .Select(n => File.Open(n, FileMode.Open))
-                .ToList();
+        public void ServiceLayerShouldNotHaveDependenciesToView() {
+            var count = GetFiles("minefield/ECommerce/App/Domain")
+                .Select(n => File.ReadAllText(n))
+                .Where(t => t.Contains("using minefield.ECommerce.App.View"))
+                .Count();
+
+            Assert.AreEqual(0, count);
         }
 
 

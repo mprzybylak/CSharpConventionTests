@@ -39,12 +39,22 @@
     <Compile Include="ECommerce\Products\Product.cs" />
     <Compile Include="ECommerce\Products\ProductDto.cs" />
     <Compile Include="ECommerce\SellingService.cs" />
+    <Compile Include="ECommerce\App\View\FirstView.cs" />
+    <Compile Include="ECommerce\App\Domain\FirstService.cs" />
+    <Compile Include="ECommerce\App\Domain\SecondService.cs" />
+    <Compile Include="ECommerce\App\Data\FirstDao.cs" />
+    <Compile Include="ECommerce\App\Data\SecondDao.cs" />
+    <Compile Include="ECommerce\App\Data\ThirdDao.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECommerce\" />
     <Folder Include="ECommerce\Pricing\" />
     <Folder Include="ECommerce\Taxes\" />
     <Folder Include="ECommerce\Products\" />
+    <Folder Include="ECommerce\App\" />
+    <Folder Include="ECommerce\App\View\" />
+    <Folder Include="ECommerce\App\Domain\" />
+    <Folder Include="ECommerce\App\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Runtime.Serialization" />
