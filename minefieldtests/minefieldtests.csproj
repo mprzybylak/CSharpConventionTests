@@ -40,6 +40,7 @@
     <Compile Include="AnalyseOfGivenType.cs" />
     <Compile Include="GettingMethods.cs" />
     <Compile Include="AnalyseOfMethods.cs" />
+    <Compile Include="WorkingWithProjectFiles.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

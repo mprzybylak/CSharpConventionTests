@@ -3,6 +3,7 @@ using minefield.ECommerce.Pricing;
 using NUnit.Framework;
 using System.Linq;
 using minefield.ECommerce;
+using System.IO;
 
 namespace minefieldtests
 {
@@ -13,6 +14,7 @@ namespace minefieldtests
 
             // given
             var type = typeof(NormalPricingStrategy);
+
 
             // when
             var ctors = type.GetConstructors()
