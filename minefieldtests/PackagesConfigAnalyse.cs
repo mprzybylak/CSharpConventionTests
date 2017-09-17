@@ -19,6 +19,7 @@ namespace minefieldtests
                 .Where(f => Regex.IsMatch(f, "id=\"NUnit\".*allowedVersions=\"\\[2,3\\)\""))
                 .Count();
 
+            // this time we would like to check that there is one occurence
             Assert.AreEqual(1, count);
         }
 
