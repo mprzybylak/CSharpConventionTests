@@ -6,10 +6,11 @@ using System.Collections.Generic;
 
 namespace minefieldtests
 {
-    public class WorkingWithProjectFiles
+    public class WorkingWithSourceCodeFiles
     {
         [Test]
-        public void ServiceLayerShouldNotHaveDependenciesToView() {
+        public void ServiceLayerShouldNotHaveDependenciesToView()
+        {
             var count = GetFiles("minefield/ECommerce/App/Domain")
                 .Select(n => File.ReadAllText(n))
                 .Where(t => t.Contains("using minefield.ECommerce.App.View"))
@@ -18,6 +19,38 @@ namespace minefieldtests
             Assert.AreEqual(0, count);
         }
 
+        [Test]
+        public void ForbiddenApiShouldNotBeCalledInAnyClass()
+        {
+            var count = GetFiles("minefield/ECommerce/App/Domain")
+                .Select(n => File.ReadAllText(n))
+                .Where(t => t.Contains("DateTime.Now"))
+                .Count();
+
+            Assert.AreEqual(0, count);
+        }
+
+        [Test]
+        public void WeShouldUseTypeAliases() // for simplicity test covers only int type
+        {
+            var count = GetFiles("minefield/ECommerce/App/Domain")
+                .Select(n => File.ReadAllText(n))
+                .Where(t => t.Contains("Int32"))
+                .Count();
+
+            Assert.AreEqual(0, count);
+        }
+
+        [Test]
+        public void WeShouldNotUseRegions()
+        {
+            var count = GetFiles("minefield/ECommerce/App/Domain")
+                .Select(n => File.ReadAllText(n))
+                .Where(t => t.Contains("#region"))
+                .Count();
+
+            Assert.AreEqual(0, count);
+        }
 
         public List<string> GetFiles(string path)
         {
@@ -30,7 +63,6 @@ namespace minefieldtests
 
             return Directory.EnumerateFiles(fullPath)
                             .ToList();
-
         }
     }
 }
