@@ -52,7 +52,7 @@ namespace minefieldtests
             Assert.AreEqual(0, count);
         }
 
-        public List<string> GetFiles(string path)
+        private IEnumerable<string> GetFiles(string path)
         {
             var d = new DirectoryInfo(Directory.GetCurrentDirectory());
             while (d.EnumerateFiles("*.sln").Any() == false)
@@ -61,8 +61,7 @@ namespace minefieldtests
             }
             var fullPath = Path.Combine(d.FullName, path);
 
-            return Directory.EnumerateFiles(fullPath)
-                            .ToList();
+            return Directory.EnumerateFiles(fullPath);
         }
     }
 }
