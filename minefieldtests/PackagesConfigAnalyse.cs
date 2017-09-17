@@ -16,7 +16,7 @@ namespace minefieldtests
             var count = GetFiles("minefieldtests")
                 .Where(n => n.EndsWith("packages.config"))
                 .Select(n => File.ReadAllText(n))
-                .Where(f => Regex.IsMatch(f, "id=\"NUnit\".*allowedVersions=\".2,3.\""))
+                .Where(f => Regex.IsMatch(f, "id=\"NUnit\".*allowedVersions=\"\\[2,3\\)\""))
                 .Count();
 
             Assert.AreEqual(1, count);
