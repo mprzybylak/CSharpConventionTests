@@ -6,15 +6,14 @@ using System.IO;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+
 namespace minefieldtests
 {
     public class RosylynMinefield
     {
-
         [Test]
         public void MethodShouldHaveOnlyOneExitPoint()
         {
-
             // get file name
             string fileName = GetFiles("minefield/ECommerce/Pricing").Where(n => n.EndsWith("NormalPricingStrategy.cs")).First();
 
@@ -35,7 +34,6 @@ namespace minefieldtests
                 .Where(mds => model.AnalyzeControlFlow(mds.Body).ReturnStatements.Count() > 1)
                 .ToList()
                 .ForEach(m => Assert.Fail(string.Format("method {0} in {1} has more than 1 exit point", m.Identifier, fileName)));
-
         }
 
 		private IEnumerable<string> GetFiles(string path)
