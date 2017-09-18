@@ -36,6 +36,24 @@ namespace minefieldtests
                 .ForEach(m => Assert.Fail(string.Format("method {0} in {1} has more than 1 exit point", m.Identifier, fileName)));
         }
 
+        [Test]
+        public void SyntaxTree() {
+
+            string fileName = GetFiles("minefield/ECommerce/Pricing").Where(n => n.EndsWith("NormalPricingStrategy.cs")).First();
+
+            SyntaxTree tree = CSharpSyntaxTree.ParseText(File.ReadAllText(fileName));
+            SyntaxNode root = tree.GetRoot();
+
+            var classes = root.DescendantNodes().OfType<ClassDeclarationSyntax>();
+            var interfaces = root.DescendantNodes().OfType<InterfaceDeclarationSyntax>();
+            var fields = root.DescendantNodes().OfType<FieldDeclarationSyntax>();
+            var properties = root.DescendantNodes().OfType<PropertyDeclarationSyntax>();
+			var methods = root.DescendantNodes().OfType<MethodDeclarationSyntax>();
+            var ctors = root.DescendantNodes().OfType<ConstructorConstraintSyntax>();
+            var namespaces = root.DescendantNodes().OfType<NamespaceDeclarationSyntax>();
+
+        }
+
 		private IEnumerable<string> GetFiles(string path)
 		{
 			var d = new DirectoryInfo(Directory.GetCurrentDirectory());
