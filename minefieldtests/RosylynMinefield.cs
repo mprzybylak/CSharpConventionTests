@@ -45,6 +45,9 @@ namespace minefieldtests
             SyntaxNode root = tree.GetRoot();
 
             var classes = root.DescendantNodes().OfType<ClassDeclarationSyntax>();
+            var className = classes.First().Identifier;
+            var classModifiers = classes.First().Modifiers;
+
             var interfaces = root.DescendantNodes().OfType<InterfaceDeclarationSyntax>();
             var fields = root.DescendantNodes().OfType<FieldDeclarationSyntax>();
             var properties = root.DescendantNodes().OfType<PropertyDeclarationSyntax>();
