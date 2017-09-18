@@ -48,12 +48,15 @@ namespace minefieldtests
             var className = classes.First().Identifier;
             var classModifiers = classes.First().Modifiers;
 
-            var interfaces = root.DescendantNodes().OfType<InterfaceDeclarationSyntax>();
-            var interfaceName = interfaces.First().Identifier;
-            var interfaceModifiers = interfaces.First().Modifiers;
+            // TODO read interface from other file
+            //var interfaces = root.DescendantNodes().OfType<InterfaceDeclarationSyntax>();
+            //var interfaceName = interfaces.First().Identifier;
+            //var interfaceModifiers = interfaces.First().Modifiers;
 
+            // TODO read type that has fields
+            // var fields = root.DescendantNodes().OfType<FieldDeclarationSyntax>();
+            // var fieldModifiers = fields.First().Modifiers;
 
-            var fields = root.DescendantNodes().OfType<FieldDeclarationSyntax>();
             var properties = root.DescendantNodes().OfType<PropertyDeclarationSyntax>();
 			var methods = root.DescendantNodes().OfType<MethodDeclarationSyntax>();
             var ctors = root.DescendantNodes().OfType<ConstructorConstraintSyntax>();
