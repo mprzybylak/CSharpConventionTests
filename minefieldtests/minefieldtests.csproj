@@ -135,6 +135,7 @@
     <Compile Include="AnalyseOfMethods.cs" />
     <Compile Include="WorkingWithSourceCodeFiles.cs" />
     <Compile Include="PackagesConfigAnalyse.cs" />
+    <Compile Include="RosylynMinefield.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
