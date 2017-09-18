@@ -50,7 +50,7 @@ namespace minefieldtests
 
             var interfaces = root.DescendantNodes().OfType<InterfaceDeclarationSyntax>();
             var interfaceName = interfaces.First().Identifier;
-            var interfaceName = interfaces.First().Modifiers;
+            var interfaceModifiers = interfaces.First().Modifiers;
 
 
             var fields = root.DescendantNodes().OfType<FieldDeclarationSyntax>();
