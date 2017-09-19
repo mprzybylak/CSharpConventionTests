@@ -54,12 +54,28 @@ namespace minefieldtests
             //var interfaceModifiers = interfaces.First().Modifiers;
 
             // TODO read type that has fields
-            // var fields = root.DescendantNodes().OfType<FieldDeclarationSyntax>();
-            // var fieldModifiers = fields.First().Modifiers;
+            //var fields = root.DescendantNodes().OfType<FieldDeclarationSyntax>();
+            //var fieldModifiers = fields.First().Modifiers;
 
-            var properties = root.DescendantNodes().OfType<PropertyDeclarationSyntax>();
-			var methods = root.DescendantNodes().OfType<MethodDeclarationSyntax>();
-            var ctors = root.DescendantNodes().OfType<ConstructorConstraintSyntax>();
+            // TODO read type that has properties
+            //var properties = root.DescendantNodes().OfType<PropertyDeclarationSyntax>();
+            //var propertyAccessors = properties.First().AccessorList;
+            //var propertyName = properties.First().Identifier;
+            //var propertyModifiers = properties.First().Modifiers;
+
+			//var methods = root.DescendantNodes().OfType<MethodDeclarationSyntax>();
+            //var methodArity = methods.First().Arity;
+            //var methodConstraints = methods.First().ConstraintClauses;
+            //var methodName = methods.First().Identifier;
+            //var methodModifiers = methods.First().Modifiers;
+            //var methodParameters = methods.First().ParameterList;
+            //var methodReturnType = methods.First().ReturnType;
+
+            //var ctors = root.DescendantNodes().OfType<ConstructorDeclarationSyntax>();
+            //var ctorName = ctors.First().Identifier;
+            //var ctorParameters = ctors.First().ParameterList;
+            //var ctorModifiers = ctors.First().Modifiers;
+
             var namespaces = root.DescendantNodes().OfType<NamespaceDeclarationSyntax>();
 
         }
