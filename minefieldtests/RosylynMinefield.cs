@@ -78,6 +78,41 @@ namespace minefieldtests
 
             var namespaces = root.DescendantNodes().OfType<NamespaceDeclarationSyntax>();
 
+            // TODO read type with ifs
+            //var ifstatements = root.DescendantNodes().OfType<IfStatementSyntax>();
+            //var ifCondition = ifstatements.First().Condition;
+            //var ifStatmenet = ifstatements.First().Statement;
+            //var ifElseStatment = ifstatements.First().Else;
+
+            //var forLoops = root.DescendantNodes().OfType<For​Statement​Syntax>();
+            //var forLoopCondition = forLoops.First().Condition;
+            //var forLoopInitalized = forLoops.First().Initializers;
+            //var forLoopDeclartion = forLoops.First().Declaration;
+            //var forLoopIncrementators = forLoops.First().Incrementors;
+            //var forLoopStatement = forLoops.First().Statement;
+            //var forLoopDeclarationIdentifier = forLoopDeclartion.Variables.First().Identifier;
+
+            //var switches = root.DescendantNodes().OfType<SwitchStatementSyntax>();
+            //var switchExpressions = switches.First().Expression;
+            //var switchSections = switches.First().Sections;
+
+            //var whiles = root.DescendantNodes().OfType<WhileStatementSyntax>();
+            //var whileCondition = whiles.First().Condition;
+            //var whileStatement = whiles.First().Statement;
+        }
+
+        [Test]
+        public void VariablesDeclaratedInForLoopShouldBeLongerThanOneLetter() {
+
+            var count = GetFiles("minefield/ECommerce/Pricing")
+                .Select(fileName => CSharpSyntaxTree.ParseText(File.ReadAllText(fileName)))
+                .Select(tree => tree.GetRoot())
+                .SelectMany(root => root.DescendantNodes().OfType<ForStatementSyntax>())
+                .SelectMany(forLoop => forLoop.Declaration.Variables)
+                .Where(variable => variable.Identifier.Text.Length < 2)
+                .Count();
+
+            Assert.AreEqual(0, count);
         }
 
 		private IEnumerable<string> GetFiles(string path)
