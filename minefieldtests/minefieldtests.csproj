@@ -136,6 +136,7 @@
     <Compile Include="WorkingWithSourceCodeFiles.cs" />
     <Compile Include="PackagesConfigAnalyse.cs" />
     <Compile Include="RosylynMinefield.cs" />
+    <Compile Include="WorkspaceApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
