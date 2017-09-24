@@ -1,10 +1,15 @@
 ﻿using System;
+using Microsoft.CodeAnalysis.MSBuild;
+
 namespace minefieldtests
 {
 
     [Test]
     public void messingAround() {
-        
+
+        // open solution
+        MSBuildWorkspace w;
+
     }
 
 	private string GetSolution()
